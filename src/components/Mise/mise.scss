@@ -1,0 +1,11 @@
+@import  "assets/styles/variables";
+
+.mise {
+  width: 180px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: $bull-selected-color;
+  border: 2px solid $bull-selected-color;
+  padding: 10px;
+}

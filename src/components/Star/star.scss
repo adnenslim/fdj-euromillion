@@ -1,0 +1,27 @@
+@import 'assets/styles/variables';
+
+.star {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 0 0 19px 0;
+  padding: 5px 0 0 0;
+  background: url(../../assets/images/star.svg) transparent no-repeat center
+    center;
+  border: none;
+  color: $star-selected-color;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+
+  span {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.selected {
+  background: url(../../assets/images/starSelected.svg) transparent no-repeat
+    center center;
+  color: $white;
+}
