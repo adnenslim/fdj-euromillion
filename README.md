@@ -31,3 +31,5 @@ yarn start or npm start
 localhost:3000
 
 ## To Visit App deployed
+
+https://fervent-beaver-3ecdc7.netlify.app
