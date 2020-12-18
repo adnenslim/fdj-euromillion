@@ -61,11 +61,5 @@
     "husky": "^4.3.6",
     "prettier": "^2.2.1",
     "prettier-eslint": "^12.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-fix",
-      "pre-push": "yarn lint"
-    }
   }
 }
