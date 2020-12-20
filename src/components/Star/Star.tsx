@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   selectStarAction,
@@ -14,13 +14,10 @@ interface StarProps {
 const Star: FC<StarProps> = ({ numero, selected }: StarProps) => {
   const dispatch = useDispatch();
 
-  const hundleSelectStar = useCallback(() => {
-    if (selected) {
-      dispatch(deselectStarAction(numero));
-    } else {
-      dispatch(selectStarAction(numero));
-    }
-  }, [selected, numero]);
+  const hundleSelectStar = () =>
+    selected
+      ? dispatch(deselectStarAction(numero))
+      : dispatch(selectStarAction(numero));
 
   return (
     <button

@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   selectBallAction,
@@ -14,13 +14,10 @@ interface BallProps {
 const Ball: FC<BallProps> = ({ numero, selected }: BallProps) => {
   const dispatch = useDispatch();
 
-  const hundleSelectBall = useCallback(() => {
-    if (selected) {
-      dispatch(deselectBallAction(numero));
-    } else {
-      dispatch(selectBallAction(numero));
-    }
-  }, [selected, numero]);
+  const hundleSelectBall = () =>
+    selected
+      ? dispatch(deselectBallAction(numero))
+      : dispatch(selectBallAction(numero));
 
   return (
     <button
