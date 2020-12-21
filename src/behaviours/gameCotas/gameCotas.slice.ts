@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import fetch from 'isomorphic-fetch';
 
 export const IDLE = 'IDLE';
 export const PENDING = 'PENDING';
