@@ -41,12 +41,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "IE 10"
+      "not op_mini all",
+      "IE 11"
     ],
     "development": [
-      ">0.2%",
-      "not dead",
-      "IE 10"
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "IE 11"
     ]
   },
   "devDependencies": {
