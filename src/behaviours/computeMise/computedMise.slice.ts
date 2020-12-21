@@ -1,10 +1,7 @@
 import { createSlice, PayloadAction, createSelector } from '@reduxjs/toolkit';
-import { WritableDraft } from 'immer/dist/internal';
-import cotas from './cotas.fake.json';
 import { State } from 'types';
 
 const initialState: State = {
-  cota: cotas,
   selectedBalls: [],
   selectedStars: [],
   mise: 0,
@@ -15,7 +12,7 @@ const computeMise = (
   selectedStars: number[],
   multiples: any
 ): number => {
-  const misePattern = multiples.find(
+  const misePattern = multiples?.find(
     (cota: any) =>
       selectedBalls.length === cota.pattern[0] &&
       selectedStars.length === cota.pattern[1]
@@ -27,7 +24,7 @@ const computeMise = (
   return 0;
 };
 
-const handleSlected = (state: WritableDraft<State>) => {
+const handleSlected = (state: any) => {
   const {
     selectedBalls,
     selectedStars,
@@ -40,9 +37,6 @@ const computedMiseSlice = createSlice({
   name: 'computedMise',
   initialState,
   reducers: {
-    changeCotaAction(state, action: PayloadAction<any>) {
-      state.cota = action.payload;
-    },
     selectBallAction(state, action: PayloadAction<number>) {
       state.selectedBalls.push(action.payload);
     },
@@ -64,13 +58,14 @@ const computedMiseSlice = createSlice({
   },
 });
 
-export const selectMise: any = createSelector(
-  (state: any) => state.computedMise,
-  (computedMise) => handleSlected(computedMise)
+export const selectMise = createSelector(
+  (state: any) => state,
+  ({ computedMise, gameCotas }) => {
+    return handleSlected({ ...computedMise, ...gameCotas });
+  }
 );
 
 export const {
-  changeCotaAction,
   selectBallAction,
   deselectBallAction,
   selectStarAction,

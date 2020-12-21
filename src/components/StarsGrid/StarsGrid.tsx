@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 import Star from 'components/Star';
 import { State } from 'types';
@@ -6,9 +6,7 @@ import { range } from 'utils/range';
 
 import './starsGrid.scss';
 
-interface StarsGridProps {}
-
-const StarsGrid: FC<StarsGridProps> = () => {
+const StarsGrid = (): JSX.Element => {
   const selectedStars = useSelector<{ computedMise: State }, number[]>(
     (state) => state.computedMise.selectedStars,
     shallowEqual

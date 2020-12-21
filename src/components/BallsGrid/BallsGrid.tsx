@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import Ball from 'components/Ball';
 import { State } from 'types';
@@ -6,9 +6,7 @@ import { range } from 'utils/range';
 
 import './ballsGrid.scss';
 
-interface BallsGridProps {}
-
-const BallsGrid: FC<BallsGridProps> = () => {
+const BallsGrid = (): JSX.Element => {
   const selectedBalls = useSelector<{ computedMise: State }, number[]>(
     (state) => state.computedMise.selectedBalls
   );
