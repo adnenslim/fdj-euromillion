@@ -1,35 +1,47 @@
-## Euro million test
+<div>
+  <h1 align="center">Euro million test</h1>
+  <strong>
+    An application used to play game euro million online, built with React, Redux-toolkit, JavaScript, and SCSS.
+  </strong>
+</div>
 
-An application used to play game euro million online, built with React, Redux-toolkit, JavaScript, and SCSS.
+<hr />
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need node and npm installed globally on your machine.
+```
+git clone https://github.com/adnenslim/fdj-euromillion.git
+cd fdj-euromillion
+yarn
+```
 
-Installation
+## Running the app
 
-yarn or npm install
+To get the app up and running (and really see if it worked), run:
 
-To Lint
+```
+yarn start
+```
 
+## To Lint
+
+```
 yarn lint
+```
 
-To Fix Lint
+### To Fix Lint
 
+```
 yarn lint-fix
+```
 
-To Build
+## To Build
 
-yarn build or npm run build
+```
+yarn build
+```
 
-To Start Server:
-
-yarn start or npm start
-
-## To Visit App localhost:
-
-localhost:3000
-
-## To Visit App deployed
-
-https://fervent-beaver-3ecdc7.netlify.app
+<div>
+  <h2><a href="https://localhost:3000">To Visit App localhost</a></h1>
+  <h2><a href="https://fervent-beaver-3ecdc7.netlify.app">To Visit App in production</a></h1>
+</div>
