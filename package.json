@@ -14,6 +14,7 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.12",
+    "http-proxy-middleware": "^1.0.6",
     "isomorphic-fetch": "^3.0.0",
     "netlify-cli": "^2.69.10",
     "node-sass": "4.14.1",
@@ -40,19 +41,19 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all",
-      "IE 11"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version",
-      "IE 11"
-    ]
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all",
+        "IE 11"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version",
+        "IE 11"
+      ]
   },
   "devDependencies": {
     "@types/webpack-env": "^1.16.0",

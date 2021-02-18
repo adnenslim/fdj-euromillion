@@ -1,10 +1,10 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import './ballsGrid.scss';
+
 import Ball from 'components/Ball';
+import React from 'react';
 import { State } from 'types';
 import { range } from 'utils/range';
-
-import './ballsGrid.scss';
+import { useSelector } from 'react-redux';
 
 const BallsGrid = (): JSX.Element => {
   const selectedBalls = useSelector<{ computedMise: State }, number[]>(

@@ -1,10 +1,11 @@
-import React from 'react';
+import './starsGrid.scss';
+
 import { shallowEqual, useSelector } from 'react-redux';
+
+import React from 'react';
 import Star from 'components/Star';
 import { State } from 'types';
 import { range } from 'utils/range';
-
-import './starsGrid.scss';
 
 const StarsGrid = (): JSX.Element => {
   const selectedStars = useSelector<{ computedMise: State }, number[]>(

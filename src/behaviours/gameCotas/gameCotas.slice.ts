@@ -13,11 +13,8 @@ const initialState: { loading: string; cota: any } = {
 
 // First, create the thunk
 export const fetchCota: any = createAsyncThunk('cota', async () => {
-  const result = await fetch(
-    'https://fdj-euromillion.herokuapp.com/rest/euromillions'
-  );
+  const result = await fetch('/apigw/rtg/rest/euromillions');
   const data = await result.json();
-
   return data;
 });
 

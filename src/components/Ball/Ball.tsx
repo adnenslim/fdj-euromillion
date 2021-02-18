@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
-import { useDispatch } from 'react-redux';
-import {
-  selectBallAction,
-  deselectBallAction,
-} from 'behaviours/computeMise/computedMise.slice';
 import './ball.scss';
+
+import React, { FC } from 'react';
+import {
+  deselectBallAction,
+  selectBallAction,
+} from 'behaviours/computeMise/computedMise.slice';
+
+import { useDispatch } from 'react-redux';
 
 interface BallProps {
   numero: number;

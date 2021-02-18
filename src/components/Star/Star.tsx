@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
-import { useDispatch } from 'react-redux';
-import {
-  selectStarAction,
-  deselectStarAction,
-} from 'behaviours/computeMise/computedMise.slice';
 import './star.scss';
+
+import React, { FC } from 'react';
+import {
+  deselectStarAction,
+  selectStarAction,
+} from 'behaviours/computeMise/computedMise.slice';
+
+import { useDispatch } from 'react-redux';
 
 interface StarProps {
   numero: number;

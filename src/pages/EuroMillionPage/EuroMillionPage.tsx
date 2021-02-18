@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react';
-import BallsGrid from 'components/BallsGrid';
-import Mise from 'components/Mise';
-import StarsGrid from 'components/StarsGrid';
 import './euroMillionPage.scss';
-import { useDispatch, useSelector } from 'react-redux';
+
 import {
-  fetchCota,
+  ERROR,
   PENDING,
   SUCCESS,
-  ERROR,
+  fetchCota,
 } from 'behaviours/gameCotas/gameCotas.slice';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import BallsGrid from 'components/BallsGrid';
 import Loading from 'components/Loading';
+import Mise from 'components/Mise';
+import StarsGrid from 'components/StarsGrid';
 
 const EuroMillionApp = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -19,6 +21,9 @@ const EuroMillionApp = (): JSX.Element => {
   const { loading } = useSelector<{ gameCotas: any }>(
     (state) => state.gameCotas
   );
+
+  const a = 19
+  console.log("🚀 ~ file: EuroMillionPage.tsx ~ line 26 ~ a", a)
   useEffect(() => {
     dispatch(fetchCota());
   }, []);
