@@ -43,5 +43,4 @@ yarn build
 
 <div>
   <h2><a href="https://localhost:3000">To Visit App localhost</a></h1>
-  <h2><a href="https://fervent-beaver-3ecdc7.netlify.app">To Visit App in production</a></h1>
 </div>
